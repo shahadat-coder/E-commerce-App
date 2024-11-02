@@ -1,4 +1,5 @@
 import 'package:bloc_ecommerce/src/presentation/screens/splash_screen.dart';
+import 'package:bloc_ecommerce/src/presentation/screens/welcome_screen.dart';
 import 'package:bloc_ecommerce/src/presentation/screens/wrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -15,6 +16,11 @@ class RoutePages {
           name: Routes.SPLASH_ROUTE,
           pageBuilder: (context, state) =>
               const MaterialPage(child: SplashScreen())),
+      GoRoute(
+          path: Routes.WELCOME_ROUTE,
+          name: Routes.WELCOME_ROUTE,
+          pageBuilder: (context, state) =>
+          const MaterialPage(child: WelcomeScreen())),
       GoRoute(
           path: Routes.LOGIN_ROUTE,
           name: Routes.LOGIN_ROUTE,
@@ -33,6 +39,7 @@ class RoutePages {
               name: Routes.HOME_ROUTE,
               pageBuilder: (context, state) =>
                   const MaterialPage(child: HomeScreen())),
+
 
         ],
       ),
